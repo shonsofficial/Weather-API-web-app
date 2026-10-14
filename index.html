@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather API</title>
+    <link rel="icon" type="image/png" href="img/weather api favicon.png"> <!--Favicon-->
+    <link rel="stylesheet" href="style.css"> <!--It is on top to prioritize loading the interface-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"> <!--Library providing free icons which are very popular-->
+</head>
+<!--Weather app with global data sources with real time updates, it has a search bar, country name, image, temperature, air dire per tissue, wind power, humidity and pressure. If you search for what doesnot exist, the app will vibrate-->
+<body>
+    
+    <main>
+        <form action="">
+            <input type="text" autocomplete="off" id="valueSearch" placeholder= " Enter a state / country">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+
+        <section class="result"> 
+            <figure class="name" id="city"> <!--Do not use divs for images, use figure tags-->
+                <figcaption>London</figcaption>
+                <img src="https://flagsapi.com/GB/shiny/32.png" alt="">
+            </figure>
+
+            <figure class="temperature" id="temperature">
+                <img src="https://openweathermap.org/img/wn/10d@4x.png">
+                <figcaption>
+                    <span>32</span>
+                    <sup>o</sup>
+                </figcaption>
+            </figure>
+
+            <p class="description">
+                Overcast clouds
+            </p>
+
+            <ul>
+                <li>
+                    <span>Clouds</span>
+                    <i class="fa-solid fa-cloud"></i>
+                    <span id="clouds">98</span>%
+                </li>
+                <li>
+                    <span>Humidity</span>
+                    <i class="fa-solid fa-droplet"></i>
+                    <span id="humidity">55</span>%
+                </li>
+                <li>
+                    <span>Pressure</span>
+                    <i class="fa-solid fa-gauge"></i>
+                    <span id="pressure">1001</span>hpa
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="app.js"></script>  <!--For user operations and calling the weather api--> 
+</body>
+</html>
